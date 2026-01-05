@@ -1,32 +1,60 @@
-# Petunjuk Penggunaan Program
+# 🍮 PT Pudding Menu Management System (Java GUI & MySQL)
 
-## Deskripsi
-Program ini adalah aplikasi GUI yang dibuat menggunakan Java. Aplikasi ini terhubung dengan database untuk mengelola data.
+PT Pudding Menu Management System is a Java-based desktop application with a graphical user interface (GUI) that integrates with a MySQL database. This application is designed to manage pudding menu data efficiently using full CRUD (Create, Read, Update, Delete) operations.
 
-## Langkah-langkah Menjalankan Program
+The system provides an interactive Swing-based interface that allows users to insert new menu items, view existing data, update menu details, and delete records directly from the database. Input validation, database connectivity handling, and real-time table updates are implemented to ensure data accuracy and usability.
 
-1. **Persyaratan Sistem**
-   - Pastikan Anda memiliki Java Development Kit (JDK) terinstal di sistem Anda.
-   - Pastikan Anda memiliki MySQL Connector/J untuk koneksi database.
+---
 
-2. **Mengunduh dan Menyiapkan Proyek**
-   - Unduh atau kloning repositori proyek ini ke dalam folder lokal Anda.
-   - Pastikan struktur folder sesuai dengan yang ada di repositori.
+## 🚀 Features
+- Java Swing-based GUI application
+- MySQL database integration (JDBC)
+- CRUD operations (Insert, View, Update, Delete)
+- Real-time data display using JTable
+- Input validation for numeric fields (price & stock)
+- Search menu by menu code
+- Auto-generated menu code
+- User-friendly pop-up notifications
+- Modular database connection handler
 
-3. **Menyiapkan Database**
-   - Buka MySQL dan buat database baru.
-   - Impor file `datamenupudding.sql` ke dalam database yang telah Anda buat.
+---
 
-4. **Menjalankan Program**
-   - Buka terminal dan navigasikan ke direktori proyek.
-   - Jalankan perintah berikut untuk membangun proyek:
-     ```bash
-     javac -d bin -cp "lib/mysql-connector-j-9.5.0.jar" src/PTPudding/*.java
-     ```
-   - Setelah berhasil dibangun, jalankan program dengan perintah:
-     ```bash
-     java -cp "bin;lib/mysql-connector-j-9.5.0.jar" PTPudding.GUI
-     ```
+## 🛠️ Tech Stack
+- Java (Core Java)
+- Java Swing (GUI)
+- MySQL
+- JDBC (MySQL Connector)
+- Object-Oriented Programming (OOP)
+- Desktop Application Development
 
-5. **Menggunakan Aplikasi**
-   - Setelah aplikasi berjalan, Anda dapat mulai menggunakan antarmuka untuk mengelola data.
+---
+
+## 🗂️ Database Structure
+**Table: `datamenupudding`**
+| Field | Description |
+|-----|------------|
+| KodeMenu | Primary key (Auto-generated) |
+| NamaMenu | Menu name |
+| HargaMenu | Menu price |
+| StokMenu | Menu stock |
+
+---
+
+## ▶️ How to Run
+1. Import the project into your Java IDE (IntelliJ / Eclipse / NetBeans)
+2. Ensure MySQL is running and database `pt_pudding` is created
+3. Import table `datamenupudding`
+4. Add MySQL JDBC Connector to the project library
+5. Run `GUI.java`
+
+---
+
+## 🎯 Learning Outcomes
+- Building desktop applications using Java Swing
+- Implementing database connectivity using JDBC
+- Applying CRUD operations in real-world scenarios
+- Managing UI events with ActionListener
+- Validating user input to prevent invalid data
+- Integrating GUI components with relational databases
+## 🔖 Tags
+Java, Java Swing, MySQL, JDBC, GUI Application, CRUD System, Desktop Application, Database Management
