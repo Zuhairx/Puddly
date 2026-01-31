@@ -2,7 +2,7 @@
 
 <div align="center">
 <img width="256" height="256" alt="Application Icon" src="https://github.com/user-attachments/assets/9ddf0a89-a7f5-43e4-9680-37deaa0e3edb" />
-" />
+
 </div>
 
 ## Persiapan Awal
