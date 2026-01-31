@@ -8,5 +8,5 @@ if %errorlevel% neq 0 (
 )
 echo Compilation successful.
 echo Running the application...
-java -cp "bin;lib/mysql-connector-j-9.5.0.jar" PTPudding.launch
+java -cp "bin;lib/mysql-connector-j-9.5.0.jar" Puddly.launch
 pause
