@@ -2,8 +2,11 @@ package PTPudding.view;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -21,12 +24,17 @@ public class InsertView {
     }
 
     private void initializeComponents() {
+
         frame = new JFrame("Menu Insert");
         frame.getContentPane().setBackground(new Color(0x007198));
         frame.setLayout(null);
         frame.setSize(600, 500);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        ImageIcon icon = new ImageIcon("image/icon.png");
+        Image iconImg = icon.getImage().getScaledInstance(500, 500, Image.SCALE_SMOOTH);
+        frame.setIconImage(iconImg);
 
         labelInsertMenu = new JLabel("Insert Data");
         labelInsertMenu.setHorizontalAlignment(SwingConstants.CENTER);

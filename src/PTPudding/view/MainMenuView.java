@@ -24,20 +24,19 @@ public class MainMenuView {
     }
 
     private void initializeComponents() {
-        mainFrame = new JFrame("Toko Pudding");
-        ImageIcon logo = new ImageIcon("image/iconLogo.png");
+        mainFrame = new JFrame("Puddly");
+        ImageIcon logo = new ImageIcon("image/logo.png");
+        ImageIcon icon = new ImageIcon("image/icon.png");
 
         Border b = BorderFactory.createLineBorder(Color.black, 3);
 
-        JLabel labelJudul = new JLabel("Data Pudding");
+        JLabel labelJudul = new JLabel();
         Image img = logo.getImage();
-        Image newimg = img.getScaledInstance(80, 80, java.awt.Image.SCALE_SMOOTH);
+        Image newimg = img.getScaledInstance(200, 200, Image.SCALE_SMOOTH);
         ImageIcon a = new ImageIcon(newimg);
         labelJudul.setIcon(a);
         labelJudul.setHorizontalTextPosition(JLabel.CENTER);
         labelJudul.setVerticalTextPosition(JLabel.BOTTOM);
-        labelJudul.setFont(new Font("Comic sans", Font.BOLD, 40));
-        labelJudul.setIconTextGap(3);
         labelJudul.setBackground(new Color(0xf5ecd5));
         labelJudul.setOpaque(true);
         labelJudul.setBorder(b);
@@ -97,7 +96,8 @@ public class MainMenuView {
         mainFrame.setSize(800, 800);
         mainFrame.setLocationRelativeTo(null);
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        mainFrame.setIconImage(logo.getImage());
+        Image iconImg = icon.getImage().getScaledInstance(500, 500, Image.SCALE_SMOOTH);
+        mainFrame.setIconImage(iconImg);
         mainFrame.getContentPane().setBackground(Color.black);
         mainFrame.add(labelJudul);
         mainFrame.add(insertButton);

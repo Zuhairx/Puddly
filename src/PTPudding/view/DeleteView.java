@@ -2,6 +2,9 @@ package PTPudding.view;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -21,12 +24,17 @@ public class DeleteView {
     }
 
     private void initializeComponents() {
+
         frame = new JFrame("Delete data");
         frame.getContentPane().setBackground(new Color(0xba7575));
         frame.setLayout(null);
         frame.setSize(600, 500);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        ImageIcon icon = new ImageIcon("image/icon.png");
+        Image iconImg = icon.getImage().getScaledInstance(500, 500, Image.SCALE_SMOOTH);
+        frame.setIconImage(iconImg);
 
         table = new JTable();
         scrollPane = new JScrollPane(table);

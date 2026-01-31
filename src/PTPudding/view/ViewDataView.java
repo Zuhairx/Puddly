@@ -2,8 +2,11 @@ package PTPudding.view;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -28,12 +31,17 @@ public class ViewDataView {
     }
 
     private void initializeComponents() {
+
         frame = new JFrame("view data");
         frame.getContentPane().setBackground(new Color(0xdec731));
         frame.setLayout(null);
         frame.setSize(600, 500);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        ImageIcon icon = new ImageIcon("image/icon.png");
+        Image iconImg = icon.getImage().getScaledInstance(500, 500, Image.SCALE_SMOOTH);
+        frame.setIconImage(iconImg);
 
         table = new JTable();
         table.setDefaultEditor(Object.class, null);
@@ -58,6 +66,7 @@ public class ViewDataView {
                     tfId.setText("");
                 }
             }
+
             @Override
             public void focusLost(FocusEvent e) {
                 if (tfId.getText().isEmpty()) {
@@ -66,20 +75,22 @@ public class ViewDataView {
             }
         });
 
-        
         tfId.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 filterTable();
             }
+
             @Override
             public void removeUpdate(DocumentEvent e) {
                 filterTable();
             }
+
             @Override
             public void changedUpdate(DocumentEvent e) {
                 filterTable();
             }
+
             private void filterTable() {
                 String text = tfId.getText();
                 if (text.equals("Search by ID...") || text.isEmpty()) {
