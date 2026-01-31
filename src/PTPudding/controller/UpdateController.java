@@ -24,7 +24,6 @@ public class UpdateController implements ActionListener {
             if (!e.getValueIsAdjusting()) {
                 int selectedRow = view.getTable().getSelectedRow();
                 if (selectedRow != -1) {
-                    String id = (String) view.getTable().getValueAt(selectedRow, 0);
                     String nama = (String) view.getTable().getValueAt(selectedRow, 1);
                     String harga = String.valueOf(view.getTable().getValueAt(selectedRow, 2));
                     String stok = String.valueOf(view.getTable().getValueAt(selectedRow, 3));
