@@ -71,7 +71,7 @@ public class UpdateController implements ActionListener {
                 javax.swing.JOptionPane.showMessageDialog(null, "Input Tidak Valid!");
             }
         } catch (Exception er) {
-            javax.swing.JOptionPane.showMessageDialog(null, "Menu Gagal Di Update");
+            javax.swing.JOptionPane.showMessageDialog(null, "Input tidak boleh kosong!");
         }
     }
 

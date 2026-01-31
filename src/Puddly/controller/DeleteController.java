@@ -38,15 +38,15 @@ public class DeleteController implements ActionListener {
             try {
                 String kode = view.getTable().getValueAt(row, 0).toString();
                 dao.deletePudding(kode);
-                JOptionPane.showMessageDialog(view.getTable(), "Data Dengan Kode Menu " + kode + " Berhasil Dihapus",
+                JOptionPane.showMessageDialog(null, "Data Dengan Kode Menu " + kode + " Berhasil Dihapus",
                         null,
                         JOptionPane.INFORMATION_MESSAGE, new javax.swing.ImageIcon("Image/success.png"));
                 loadTable();
             } catch (SQLException ex) {
-                JOptionPane.showMessageDialog(view.getTable(), "Error deleting data: " + ex.getMessage());
+                JOptionPane.showMessageDialog(null, "Error deleting data: " + ex.getMessage());
             }
         } else {
-            JOptionPane.showMessageDialog(view.getTable(), "Pilih Data Yang Ingin Dihapus!");
+            JOptionPane.showMessageDialog(null, "Pilih Data Yang Ingin Dihapus!");
         }
     }
 
@@ -63,7 +63,7 @@ public class DeleteController implements ActionListener {
             }
             view.setTableModel(model);
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(view.getTable(), "Error loading data: " + ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Error loading data: " + ex.getMessage());
 
             DefaultTableModel model = new DefaultTableModel();
             model.addColumn("ID");
