@@ -1,0 +1,4 @@
+- [x] Reposition tfId to left column top
+- [x] Reposition labels and fields vertically on left: labelNamaMenu, tfNama, labelHargaMenu, tfHarga, labelStokMenu, tfStok
+- [x] Move table to right column
+- [x] Keep buttons at bottom
