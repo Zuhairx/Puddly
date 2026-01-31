@@ -1,6 +1,6 @@
 @echo off
 echo Compiling Java files...
-for /r src %%f in (*.java) do javac -d bin -cp "lib/mysql-connector-j-9.5.0.jar" %%f
+javac -d bin -cp "lib/mysql-connector-j-9.5.0.jar" src/Puddly/*.java src/Puddly/controller/*.java src/Puddly/model/*.java src/Puddly/view/*.java
 if %errorlevel% neq 0 (
     echo Compilation failed.
     pause
