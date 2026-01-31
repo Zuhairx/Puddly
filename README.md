@@ -1,7 +1,7 @@
-# Pudding Data Management System V 1.0 - User Tutorial
+# Puddly - User Tutorial
 
 <div align="center">
-<img width="256" height="256" alt="Application Icon" src="image/iconLogo.png" />
+<img width="256" height="256" alt="Application Icon" src="image/icon.png" />
 </div>
 
 ## Initial Preparation
@@ -20,11 +20,11 @@
 - **Via Terminal**:
   - Run the following command to build the project:
     ```bash
-    javac -d bin -cp "lib/mysql-connector-j-9.5.0.jar" src/PTPudding/*.java
+    javac -d bin -cp "lib/mysql-connector-j-9.5.0.jar" src/Puddly/*.java
     ```
   - After successful build, run the program with the command:
     ```bash
-    java -cp "bin;lib/mysql-connector-j-9.5.0.jar" PTPudding.launch
+    java -cp "bin;lib/mysql-connector-j-9.5.0.jar" Puddly.launch
     ```
 
 ## User Guide
