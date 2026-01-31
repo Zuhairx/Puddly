@@ -1,76 +1,79 @@
-# Pudding Data Management System V 1.0 - Tutorial Penggunaan
+# Pudding Data Management System V 1.0 - User Tutorial
 
 <div align="center">
-<img width="256" height="256" alt="iconAplikasi" src="image/iconLogo.png" />
+<img width="256" height="256" alt="Application Icon" src="image/iconLogo.png" />
 </div>
 
-## Persiapan Awal
+## Initial Preparation
 
-### 1. Persyaratan Sistem
-- Java Development Kit (JDK) terinstall
-- MySQL Server terinstall
+### 1. System Requirements
+- Java Development Kit (JDK) installed
+- MySQL Server installed
 
-### 2. Setup Database
-1. Buat database baru di MySQL
-2. Import file `Database/Pudding_database.sql` ke dalam database tersebut
-3. Pastikan koneksi database sudah dikonfigurasi dengan benar (lihat `KoneksiDatabase.java`)
+### 2. Database Setup
+1. Create a new database in MySQL
+2. Import the file `Database/Pudding_database.sql` into the database
+3. Ensure the database connection is configured correctly (see `KoneksiDatabase.java`)
 
-### 3. Menjalankan Aplikasi
-- **Via Batch File**: Jalankan `run.bat` (untuk Windows) - ini akan mengkompilasi dan menjalankan aplikasi secara otomatis.
+### 3. Running the Application
+- **Via Batch File**: Run `run.bat` (for Windows) - this will compile and run the application automatically.
 - **Via Terminal**:
-  - Jalankan perintah berikut untuk membangun proyek:
+  - Run the following command to build the project:
     ```bash
     javac -d bin -cp "lib/mysql-connector-j-9.5.0.jar" src/PTPudding/*.java
     ```
-  - Setelah berhasil dibangun, jalankan program dengan perintah:
+  - After successful build, run the program with the command:
     ```bash
     java -cp "bin;lib/mysql-connector-j-9.5.0.jar" PTPudding.launch
     ```
 
-## Panduan Penggunaan
+## User Guide
 
 ### Main Menu
-1. Jalankan aplikasi
-2. Anda akan melihat menu utama dengan opsi: Insert, Update, Delete, View Data
+1. Run the application
+2. You will see the main menu with options: Insert, Update, Delete, View Data
 
 ### Insert Data
-1. Klik "Insert" di menu utama
-2. Isi data pudding (nama, harga, dll.)
-3. Klik "Insert" untuk menyimpan
+1. Click "Insert" in the main menu
+2. Fill in the pudding data (name, price, etc.)
+3. Click "Insert" to save
 
 ### Update Data
-1. Klik "Update" di menu utama
-2. Pilih data pudding dari tabel
-3. Ubah data yang diperlukan
-4. Klik "Update"
+1. Click "Update" in the main menu
+2. Search or Select a pudding data from the table on the right
+3. Modify the required data in the fields on the left
+4. Click "Update"
 
 ### Delete Data
-1. Klik "Delete" di menu utama
-2. Pilih data pudding dari tabel
-3. Klik "Delete"
+1. Click "Delete" in the main menu
+2. Select pudding data from the table
+3. Click "Delete"
 
 ### View Data
-1. Klik "View Data" di menu utama
-2. Lihat semua data pudding dalam tabel
+1. Click "View Data" in the main menu
+2. View all pudding data in the table
 
-## Struktur Database
+## Database Structure
 
-### Tabel `menu`
-- `id` (INT): ID unik pudding
-- `nama` (VARCHAR): Nama pudding
-- `harga` (INT): Harga pudding
-- `stok` (INT): Jumlah stok
-- dll. (sesuai model Pudding.java)
+### Table `menu`
+- `id` (INT): Unique pudding ID
+- `nama` (VARCHAR): Pudding name
+- `harga` (INT): Pudding price
+- `stok` (INT): Stock quantity
+- etc. (according to Pudding.java model)
 
 ## Troubleshooting
 
-### Tidak Bisa Koneksi Database
-- Pastikan MySQL server sedang berjalan
-- Periksa konfigurasi di `KoneksiDatabase.java`
+### Cannot Connect to Database
+- Ensure MySQL server is running
+- Check configuration in `KoneksiDatabase.java`
 
-### Aplikasi Tidak Bisa Dijalankan
-- Pastikan JDK terinstall
-- Pastikan semua file .class sudah dikompilasi
+### Application Cannot Run
+- Ensure JDK is installed
+- Ensure all .class files are compiled
 
-## Dukungan
-Untuk pertanyaan atau masalah, hubungi developer.
+## Support
+For questions or issues, contact the developer.
+
+## Recent Updates
+- Updated Update Data interface layout: Repositioned ID field to top left, arranged labels and fields vertically on the left, moved table to right column, kept buttons at bottom.
