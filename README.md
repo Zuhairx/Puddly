@@ -1,57 +1,54 @@
-# Puddly - User Tutorial
+# Puddly - Tutorial Penggunaan
 
 <div align="center">
 <img width="256" height="256" alt="Application Icon" src="image/icon.png" />
 </div>
 
-## Initial Preparation
+## Persiapan Awal
 
-### 1. System Requirements
-- Java Development Kit (JDK) installed
-- MySQL Server installed
+### 1. Persyaratan Sistem
+- Java Development Kit (JDK) terinstal
+- MySQL Server terinstal
 
-### 2. Database Setup
-1. Create a new database in MySQL
-2. Import the file `Database/Pudding_database.sql` into the database
-3. Ensure the database connection is configured correctly (see `KoneksiDatabase.java`)
+### 2. Setup Database 
+1. Import file `database/stockwise2_db.sql` ke dalam database
+3. Pastikan koneksi database sudah dikonfigurasi dengan benar (lihat `koneksiDatabase.java`)
 
-### 3. Running the Application
-- **Via Batch File**: Run `run.bat` (for Windows) - this will compile and run the application automatically.
-- **Via Terminal**:
-  - Run the following command to build the project:
-    ```bash
-    javac -d bin -cp "lib/mysql-connector-j-9.5.0.jar" src/Puddly/*.java
-    ```
-  - After successful build, run the program with the command:
-    ```bash
-    java -cp "bin;lib/mysql-connector-j-9.5.0.jar" Puddly.launch
-    ```
+### 3. Menjalankan Aplikasi
+- **Via Batch File**: Jalankan `run.bat` (untuk Windows)
+- **Via Terminal**: `javac -d bin -cp "lib/mysql-connector-j-9.5.0.jar" src/Puddly/*.java`
+- Setelah proses build berhasil, jalankan aplikasi dengan perintah:
+  `java -cp "bin;lib/mysql-connector-j-9.5.0.jar" Puddly.launch` 
 
-## User Guide
+## Panduan Penggunaan
 
-### Main Menu
-1. Run the application
-2. You will see the main menu with options: Insert, Update, Delete, View Data
+### Menu Utama
+1. Jalankan aplikasi
+2. Akan muncul menu utama dengan pilihan:
+   - **Insert**
+   - **Update**
+   - **Delete**
+   - **View Data**
 
-### Insert Data
-1. Click "Insert" in the main menu
-2. Fill in the pudding data (name, price, etc.)
-3. Click "Insert" to save
+### Menambahkan Data (Insert)
+1. Klik tombol **Insert** pada menu utama
+2. Isi data pudding (nama, harga, dan data lainnya)
+3. Klik **Insert** untuk menyimpan data ke database
 
-### Update Data
-1. Click "Update" in the main menu
-2. Search or Select a pudding data from the table on the right
-3. Modify the required data in the fields on the left
-4. Click "Update"
+### Mengubah Data (Update)
+1. Klik tombol **Update** pada menu utama
+2. Cari atau pilih data pudding dari tabel di sebelah kanan
+3. Ubah data yang diperlukan pada form di sebelah kiri
+4. Klik **Update** untuk menyimpan perubahan data
 
-### Delete Data
-1. Click "Delete" in the main menu
-2. Select pudding data from the table
-3. Click "Delete"
+### Menghapus Data (Delete)
+1. Klik tombol **Delete** pada menu utama
+2. Pilih data pudding dari tabel
+3. Klik **Delete** untuk menghapus data dari database
 
-### View Data
-1. Click "View Data" in the main menu
-2. View all pudding data in the table
+### Melihat Data (View Data)
+1. Klik tombol **View Data** pada menu utama
+2. Seluruh data pudding akan ditampilkan dalam tabel
 
 ## Database Structure
 
@@ -64,16 +61,14 @@
 
 ## Troubleshooting
 
-### Cannot Connect to Database
-- Ensure MySQL server is running
-- Check configuration in `KoneksiDatabase.java`
+### Tidak Dapat Terhubung ke Database
+- Pastikan MySQL Server sedang berjalan
+- Periksa konfigurasi koneksi pada file `KoneksiDatabase.java`
 
-### Application Cannot Run
-- Ensure JDK is installed
-- Ensure all .class files are compiled
+### Aplikasi Tidak Dapat Dijalankan
+- Pastikan Java Development Kit (JDK) sudah terinstal
+- Pastikan seluruh file `.class` berhasil dikompilasi
 
-## Support
-For questions or issues, contact the developer.
+## Dukungan
+Jika terdapat pertanyaan atau kendala, silakan hubungi pengembang.
 
-## Recent Updates
-- Updated Update Data interface layout: Repositioned ID field to top left, arranged labels and fields vertically on the left, moved table to right column, kept buttons at bottom.
